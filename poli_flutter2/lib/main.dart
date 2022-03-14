@@ -175,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(
                           builder: ((context) => SlideCount())));
                     }, 
-                    child: Text("With Slider"),
+                    child: Text("With Slider ->"),
                     style: ElevatedButton.styleFrom(
                         primary: Colors.blueGrey,
                         fixedSize: Size(150, 50),

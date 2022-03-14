@@ -131,7 +131,7 @@ class _SlideCount extends State<SlideCount> {
                             MaterialPageRoute(
                                 builder: ((context) => ComboCount())));
                       },
-                      child: Text("ComboBox"),
+                      child: Text("ComboBox ->"),
                       style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey,
                           fixedSize: Size(150, 50),
