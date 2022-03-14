@@ -53,7 +53,7 @@ class _ComboCount extends State<ComboCount> {
             Slider(
               value: _counter,
               max: 500 * _multiplier,
-              divisions: 50 * _multiplier.toInt(),
+              divisions: 500,
               label: _counter.round().toString(),
               onChanged: (double value) {
                 setState(() {
@@ -77,7 +77,7 @@ class _ComboCount extends State<ComboCount> {
                     onChanged: (double? newValue) {
                       setState(() {
                         _multiplier = newValue!;
-                        _counter = 0;
+                        _counter = 0.0;
                       });
                     })
               ],

@@ -54,7 +54,7 @@ class _SlideCount extends State<SlideCount> {
             Slider(
               value: _counter,
               max: 500 * _multiplier,
-              divisions: 50 * _multiplier.toInt(),
+              divisions: 500,
               label: _counter.round().toString(),
               onChanged: (double value) {
                 setState(() {
@@ -68,14 +68,15 @@ class _SlideCount extends State<SlideCount> {
                 const Text("Multiplier:"),
                 Slider(
                     value: _multiplier,
-                    min: 1.0,
-                    max: 15,
-                    divisions: 15,
+                    max: 20,
+                    divisions: 20,
                     label: _multiplier.round().toString(),
                     onChanged: (double value) {
                       setState(() {
                         _multiplier = value;
-                        _counter = 0;
+                        value != 0 ? _multiplier = value : _multiplier = 1.0;
+                        print(_multiplier);
+                        _counter = 0.0;
                       });
                     })
               ],
@@ -126,11 +127,11 @@ class _SlideCount extends State<SlideCount> {
                   padding: EdgeInsets.fromLTRB(0, 10, 18, 0),
                   child: ElevatedButton(
                       onPressed: () {
-                      Navigator.push(
-                        context, 
-                        MaterialPageRoute(
-                          builder: ((context) => ComboCount())));
-                    },
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => ComboCount())));
+                      },
                       child: Text("ComboBox"),
                       style: ElevatedButton.styleFrom(
                           primary: Colors.blueGrey,

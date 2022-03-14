@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Slider(
               value: _counter,
               max: 500 * _multiplier,
-              divisions: 50 * _multiplier.toInt(),
+              divisions: 500,
               label: _counter.round().toString(),
               onChanged: (double value) {
                 setState(() {
