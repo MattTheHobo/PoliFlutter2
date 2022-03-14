@@ -8,7 +8,6 @@ class SlideCount extends StatefulWidget {
 
 class _SlideCount extends State<SlideCount> {
   double _counter = 0.0, _multiplier = 1.0;
-  double divider = 50.0;
 
   void _incrementCounter() {
     setState(() {

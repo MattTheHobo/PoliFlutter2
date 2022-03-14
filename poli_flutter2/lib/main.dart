@@ -27,8 +27,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   double _counter = 0.0, _multiplier = 1.0;
-  double divider = 50.0;
-  bool isSwitched1 = false, isSwitched2 = false;
+  bool _isSwitched1 = false, _isSwitched2 = false;
 
   void _incrementCounter() {
     setState(() {
@@ -90,11 +89,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     const Text("x2"),
                     Switch(
-                        value: isSwitched1,
+                        value: _isSwitched1,
                         onChanged: (value) {
                           setState(() {
-                            isSwitched1 = value;
-                            isSwitched2 = false;
+                            _isSwitched1 = value;
+                            _isSwitched2 = false;
                             _counter = 0.0;
                             value ? _multiplier = 2.0 : _multiplier = 1.0;
                           });
@@ -106,11 +105,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     const Text("x5"),
                     Switch(
-                        value: isSwitched2,
+                        value: _isSwitched2,
                         onChanged: (value) {
                           setState(() {
-                            isSwitched2 = value;
-                            isSwitched1 = false;
+                            _isSwitched2 = value;
+                            _isSwitched1 = false;
                             _counter = 0.0;
                             value ? _multiplier = 5.0 : _multiplier = 1.0;
 

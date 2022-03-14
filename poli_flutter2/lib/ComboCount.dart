@@ -7,7 +7,6 @@ class ComboCount extends StatefulWidget {
 
 class _ComboCount extends State<ComboCount> {
   double _counter = 0.0, _multiplier = 1.0;
-  double divider = 50.0;
 
   void _incrementCounter() {
     setState(() {
