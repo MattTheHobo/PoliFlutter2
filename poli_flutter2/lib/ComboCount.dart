@@ -67,6 +67,13 @@ class _ComboCount extends State<ComboCount> {
                 const Text("Multiplier:"),
                 DropdownButton<double>(
                     value: _multiplier,
+                    icon: const Icon(Icons.arrow_downward),
+                    elevation: 16,
+                    style: const TextStyle(color: Colors.blueGrey),
+                    underline: Container(
+                      height: 2,
+                      color: Colors.blueGrey,
+                    ),
                     items: <double>[1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]
                         .map<DropdownMenuItem<double>>((double value) {
                       return DropdownMenuItem<double>(
